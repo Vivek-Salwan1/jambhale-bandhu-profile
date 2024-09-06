@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #fff; /* White background for the entire profile */
+}
+
+.profile {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #fff; /* White background */
+}
+
+/* Logo Section */
+.logo-name {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Lora", serif;
+    color: #d32f2f; /* Red color for the text */
+}
+
+.logo {
+    position: relative; /* Needed for absolute positioning within it */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #fdd835; /* Yellow border around the logo */
+    margin: 0 auto 10px;
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex; /* Flexbox for centering the image */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    background-color: #fff; /* White background inside the logo */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: relative; 
+}
+
+.logo-name h2 {
+    font-size: 40px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #d32f2f; /* Red color for the shop name */
+    margin-bottom: 0;
+}
+
+
+.styled-heading {
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 40px;
+    color: #d32f2f; /* Deep red color matching your theme */
+    margin: 30px 0;
+}
+
+.styled-heading span {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.styled-heading span:before,
+.styled-heading span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #d32f2f; /* Color matching your theme */
+}
+
+.styled-heading span:before {
+    left: -40px;
+}
+
+.styled-heading span:after {
+    right: -40px;
+}
+
+
+/* Larger screens adjustments */
+@media only screen and (min-width: 600px) {
+    .profile {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-name h2 {
+        font-size: 24px;
+    }
+}
+
+
+.review {
+    background-color: #fff; /* White background for a clean card effect */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.review a {
+    text-decoration: none;
+}
+
+.review button {
+    background-color: #d32f2f; /* Red color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.review button:hover {
+    background-color: #fdd835; /* Yellow hover effect */
+    color: #d32f2f; /* Red text on hover */
+}
+
+
+
+/* about */
+
+
+.about {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.about h3 {
+    text-align: center;
+    color: #d32f2f; 
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    color: #d32f2f; /* Highlight important text in red */
+    font-weight: bold;
+}
+
+/* caousel */
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Hide images that are not in the viewport */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0; /* Ensure images don’t shrink below their size */
+}
+
+/* Buttons for navigation */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
+}
+
+.carousel button:hover {
+    background-color: #fdd835; /* Yellow color on hover */
+    color: #d32f2f; /* Red color for the text */
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 600px) {
+    .carousel button {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+/* Product Showcase Section */
+.product-showcase {
+    background-color: #fff; /* White background for clean look */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-showcase h3 {
+    font-size: 24px;
+    color: #d32f2f; /* Red color for heading */
+    margin-bottom: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures the cards wrap on smaller screens */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Product Cards */
+.product-card {
+    background-color: #f58989; /* Yellow background for cards */
+    width: 45%;
+    height: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Product Title */
+.product-card h4 {
+    font-size: 18px;
+    color: rgb(255, 242, 0); /* Red color for product titles */
+    margin-bottom: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* Product Description */
+.product-card p {
+    font-size: 14px;
+    color: #fff; /* White text for descriptions */
+    line-height: 1.2;
+}
+
+/* Responsive Design */
+/* @media (min-width: 600px) {
+    .product-card {
+        width: 30%; 
+    }
+} */
+
+
+/* special offers */
+
+
+/* Special Offers Section */
+.special-offers {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.special-offers h3 {
+    font-size: 24px;
+    color: #d32f2f; /* Red color for heading */
+    margin-bottom: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* Offers Container */
+.offers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Offer Card */
+.offer-card {
+    background-color: #fff;  /* Yellow background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Depth effect */
+    text-align: center;
+}
+
+.offer-card h4 {
+    color: #daa520; /* Red heading */
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.offer-card p {
+    color: #795907; /* White text for offer description */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.offer-card span {
+    display: block;
+    color: #555; /* Gray text for offer expiry */
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.offer-card button {
+    background-color: #d32f2f; /* Red button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.offer-card button:hover {
+    background-color: #fff; 
+    color: #d32f2f; 
+    border: 2px solid #d32f2f; 
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .offers-container {
+        flex-direction: row; /* Cards side by side on larger screens */
+    }
+    
+    .offer-card {
+        width: 30%; /* Equal width for cards on large screens */
+    }
+}
+
+
+
+/* branches */
+
+
+/* Branches Section */
+.branches-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.branches-section h3 {
+    font-size: 24px;
+    color: #d32f2f; /* Red heading */
+    margin-bottom: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.branch {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.branch-info {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.branch-info h4 {
+    font-size: 18px;
+    color: #4169E1; /* Red subheading */
+    margin-bottom: 5px;
+}
+
+.branch-info p {
+    font-size: 14px;
+    color: #0f276e; /* Grey text */
+    margin-bottom: 5px;
+}
+
+.branch-map iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .branch {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .branch-info, .branch-map {
+        width: 48%;
+    }
+}
+
+
+
+/* Footer Section */
+.footer-name {
+    text-align: center;
+    margin-top: 50px; /* Space from the content above */
+    padding: 15px;
+    color: rgba(132, 5, 132, 0.884);
+    background-color: #fff; /* Light background to highlight the text */
+}
+
+.footer-name h1 {
+    font-family: 'Baloo Bhaina 2', cursive; /* Stylish font with a traditional feel */
+    font-size: 120px; /* Large font size for prominence */
+    background: -webkit-linear-gradient(top, #ffd700, #d32f2f); /* Gold to Red gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+    font-weight: bold;
+    letter-spacing: 3px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* .footer-name img{
+  width: 100%;
+  height: auto;
+} */
+
+/* Responsive adjustment */
+@media screen and (max-width: 600px) {
+    .footer-name h1 {
+        font-size: 50px; /* Slightly smaller font size for mobile screens */
+    }
+}
