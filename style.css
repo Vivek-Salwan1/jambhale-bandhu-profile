@@ -468,31 +468,59 @@ ul li strong {
 /* Footer Section */
 .footer-name {
     text-align: center;
-    margin-top: 50px; /* Space from the content above */
+    margin-top: 50px;
     padding: 15px;
-    color: rgba(132, 5, 132, 0.884);
-    background-color: #fff; /* Light background to highlight the text */
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
-.footer-name h1 {
-    font-family: 'Baloo Bhaina 2', cursive; /* Stylish font with a traditional feel */
-    font-size: 120px; /* Large font size for prominence */
-    background: -webkit-linear-gradient(top, #ffd700, #d32f2f); /* Gold to Red gradient */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
-    font-weight: bold;
-    letter-spacing: 3px; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.footer-name img {
+    width: 100%;          /* Ensures the image scales to fit the container width */
+    max-width: 1600px;    /* Limits the image to its original width */
+    height: auto;         /* Maintains the aspect ratio */
+    display: block;       /* Centers the image within the container */
+    margin: 0 auto;       /* Centers the image horizontally */
 }
-
-/* .footer-name img{
-  width: 100%;
-  height: auto;
-} */
 
 /* Responsive adjustment */
 @media screen and (max-width: 600px) {
-    .footer-name h1 {
-        font-size: 50px; /* Slightly smaller font size for mobile screens */
+    .footer-name img {
+        width: 100%;      /* Image scales down on smaller screens */
+        height: auto;     /* Aspect ratio is preserved */
     }
+}
+
+
+
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.map-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map-link iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2; /* Ensures the overlay is above the iframe */
 }
