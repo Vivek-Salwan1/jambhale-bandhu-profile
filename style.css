@@ -464,6 +464,14 @@ ul li strong {
 }
 
 
+.branch-info a{
+    color: #551A8B;
+    text-decoration: none;
+
+
+}
+
+
 
 /* Footer Section */
 .footer-name {
@@ -523,4 +531,30 @@ ul li strong {
     background: transparent;
     cursor: pointer;
     z-index: 2; /* Ensures the overlay is above the iframe */
+}
+
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    background-color: #25d366;
+     /* background-color: #ff6b6b; */
+    color: white; 
+    font-size: 30px;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    z-index: 1000; 
+    text-decoration: none; 
+}
+
+.whatsapp-icon:hover {
+    background-color: #1ebe57; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
